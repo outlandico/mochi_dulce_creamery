@@ -1,0 +1,49 @@
+/* styling.css */
+
+body {
+  background-color: hsl(170, 81%, 35%);
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.container {
+  position: ab; /* Ensure relative positioning for absolute elements inside */
+}
+
+.img-size {
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo-size {
+  position: absolute; /* Position logo absolutely within the container */
+  top: 40px; /* Adjust top position as needed */
+  left: 50%; /* Center the logo horizontally */
+  transform: translateX(-50%); /* Adjust horizontal position to center */
+  width: 250px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.menu {
+  position: absolute; /* Position the menu absolutely */
+  top: 120px; /* Adjust top position to place it just under the logo */
+  left: 50%; /* Center the menu horizontally */
+  transform: translateX(-50%); /* Adjust horizontal position to center */
+}
+
+.menu ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  text-align: center; /* Center menu items horizontally */
+}
+
+.menu li {
+  display: inline-block; /* Display menu items inline */
+  margin: 0 10px; /* Add space between menu items */
+}
+
+.menu li a {
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Adjust font size */
+}
