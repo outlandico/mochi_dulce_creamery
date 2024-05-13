@@ -1,0 +1,74 @@
+body {
+  background-color: #fb5656; /* Transparent background */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; /* Set body height to full viewport height */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  margin-top: 40px; /* Adjust as needed */
+}
+
+.container h1 {
+  color: #12f9d6; /* Text color */
+  font-family: Arial, sans-serif; /* Font family */
+  text-align: center; /* Center align heading */
+  margin-bottom: 40px; /* Bottom margin adjustment */
+  font-weight: bold; /* Bold font weight */
+}
+
+.container p {
+  color: #3ef9f3; /* Text color */
+  max-width: 600px; /* Maximum width */
+  padding: 20px; /* Padding */
+  line-height: 1.6; /* Line height */
+}
+
+
+.menu-links {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 210px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-links > a {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.img-size {
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  padding: 2em;
+  background-color: #bd87875b; /* Transparent background */
+  z-index: 999; /* Ensure the container stays on top */
+  transition: background-color 0.9s ease; /* Smooth transition for opacity change */
+}
+
+.logo-size {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+}
