@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import Home from './Home';
 import './App.css';
 
+const API_SERVER = import.meta.env.DATABASE_URL;
+
 function App() {
   // Define state variables for data, error, and loading
   const [data, setData] = useState(null);
@@ -32,6 +34,7 @@ function App() {
   return (
     <>
       <Home />
+      <About />
       {/* Render other components as needed */}
       {loading ? (
         <p>Loading...</p>
