@@ -1,26 +1,41 @@
-
-import './css/styling.css'; // Import your CSS file
-
-// Import your image files
-import myImage from './images/pina.png';
-import frescaFlavor from './images/fresca.png';
-import myLogo from './images/mochi_dulce_creamery_logo.png';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import logoImage from './images/mochi_dulce_creamery_logo.png'; // Import the image file
+import './css/home.css'; // Import the CSS file
 
 function Home() {
-  // Render content
+  useEffect(() => {
+    window.addEventListener('scroll', function() {
+      var logoContainer = document.querySelector('.logo-container');
+      var container = document.querySelector('.container');
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > logoContainer.offsetHeight) {
+        container.style.opacity = '0'; // Hide the text when scroll position is below the logo container
+      } else {
+        container.style.opacity = '1'; // Show the text when scroll position is above the logo container
+      }
+    });
+  }, []); // Empty dependency array ensures the effect is only applied once
+
   return (
-    <div className="container">
-      <nav className="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#loyalty">Loyalty</a></li>
-        </ul>
-      </nav>
-      <img src={myImage} alt="My Image" className="img-size" />
-      <img src={frescaFlavor} alt="Fresca Flavor" className="img-size" />
-      <img src={myLogo} alt="My Logo" className="logo-size" />
+    <div>
+      {/* Menu links */}
+      <div className="menu-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/menu">Menu</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/loyalty">Loyalty</Link>
+      </div>
+      {/* Logo placeholder */}
+      <div className="logo-container">
+        <img src={logoImage} alt="Mochi & Dulce Creamery Logo" className="logo-size" />
+      </div>
+      {/* Rest of the Home component content */}
+      <div className="container">
+        <h1>Welcome Back!</h1>
+         </div>
     </div>
   );
 }
